@@ -31,6 +31,10 @@ io.sockets.on('connection', function(socket){
 		io.sockets.emit("heard", {data: "test"});
 	});
 
+	socket.on("mainchatSubmit", (data) => {
+		io.sockets.emit("mainchatEmit", data);
+	});
+
 	socket.on("disconnect", function(data){
 		
 	});

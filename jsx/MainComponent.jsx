@@ -24,6 +24,8 @@ export default class MainComponent extends React.Component {
                     <div className="col-md-8">
                         <Chat 
                         	socket={this.state.socket}
+                        	recievedEvent={"mainchatEmit"}
+                        	submitEvent={"mainchatSubmit"}
                         />
                     </div>
                     <div className="col-md-4">
