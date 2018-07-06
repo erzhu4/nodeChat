@@ -1,0 +1,22 @@
+<h1>THE APP</h1>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<div>hello</div>
+<div id="the-div"></div>
+<input id="input">
+<button id="submit-button">Submit</button>
+
+<script>
+	var socket = io.connect();
+	var button = document.getElementById("submit-button");
+	button.addEventListener('click', function(){
+		console.log("clicked here");
+		socket.emit("derp", {data: "test"});
+	});
+
+	socket.on("heard", function(data){
+		console.log("Heard!!!");
+		console.log(data);
+	});
+</script>
