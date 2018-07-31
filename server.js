@@ -16,8 +16,12 @@ app.get('/', function(req, res) {
   	res.sendFile(absoluteDir + '/html/home.html');
 });
 
+app.get('/chess', function(req, res) {
+  	res.sendFile(absoluteDir + '/html/chessGame.html');
+});
+
 app.get('/test', function(req, res) {
-	res.sendFile(absoluteDir + '/html/index.html');
+	res.sendFile(absoluteDir + '/html/test.html');
 });
 
 

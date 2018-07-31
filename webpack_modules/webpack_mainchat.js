@@ -1,7 +1,6 @@
-var webpack = require('webpack');
 var path = require('path');
 
-var reactModule = {
+var chatModule = {
 
     entry: [
         './jsx/MainComponent.jsx'
@@ -23,4 +22,4 @@ var reactModule = {
 
 };
 
-module.exports = [reactModule];
+module.exports = chatModule;
